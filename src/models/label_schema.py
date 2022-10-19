@@ -11,7 +11,6 @@ class LabelModel(BaseModel):
     client: str = Field(...)
     quantity: int = Field(...)
     supplier: str = Field(...)
-    path: Union[str, None] = Field(None)
 
     class Config:
         orm_mode = True

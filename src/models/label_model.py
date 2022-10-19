@@ -14,4 +14,3 @@ class Label(Base):
     client = Column(String)
     quantity = Column(Integer)
     supplier = Column(String)
-    path = Column(String)
