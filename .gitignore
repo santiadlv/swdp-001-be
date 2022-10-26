@@ -130,3 +130,6 @@ dmypy.json
 
 # VSCode dependencies
 *.vscode
+
+# SQLite database files
+*.db
