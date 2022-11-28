@@ -24,6 +24,7 @@ def create_template(db: Session, obj_in: template_schema.TemplateModel) -> Optio
         barcode=obj_in.barcode,
         client=obj_in.client,
         quantity=obj_in.quantity,
+        internal_code=obj_in.internal_code,
         t_height=obj_in.t_height,
         t_width=obj_in.t_width
     )

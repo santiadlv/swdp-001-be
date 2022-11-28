@@ -14,6 +14,7 @@ class Template(Base):
     barcode = Column(Integer)
     client = Column(Integer)
     quantity = Column(Integer)
+    internal_code = Column(Integer)
     t_height = Column(String)
     t_width = Column(String)
     
