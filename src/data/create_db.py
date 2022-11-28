@@ -26,6 +26,7 @@ def create_tables(cursor: sqlite3.Cursor, connection: sqlite3.Connection):
         barcode INTEGER,
         client INTEGER,
         quantity INTEGER,
+        internal_code INTEGER,
         t_height TEXT,
         t_width TEXT)
     """)
@@ -44,12 +45,12 @@ def insert_values(cursor: sqlite3.Cursor, connection: sqlite3.Connection):
     cursor.execute('INSERT INTO labels VALUES (13100553873173, 1009, CURRENT_TIMESTAMP, "Test description 10", "Test client 10", 7, "Supplier 10")')
 
     cursor.execute("""
-        INSERT INTO templates (name, description, date, purchase_order, supplier, barcode, client, quantity, t_height, t_width) 
-        VALUES ("Completa", TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, "10cm", "15cm")
+        INSERT INTO templates (name, description, date, purchase_order, supplier, barcode, client, quantity, internal_code, t_height, t_width) 
+        VALUES ("Completa", TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, "10cm", "15cm")
     """)
     cursor.execute("""
-        INSERT INTO templates (name, description, date, purchase_order, supplier, barcode, client, quantity, t_height, t_width) 
-        VALUES ("Vacia", FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, "10cm", "15cm")
+        INSERT INTO templates (name, description, date, purchase_order, supplier, barcode, client, quantity, internal_code, t_height, t_width) 
+        VALUES ("Vacia", FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, "10cm", "15cm")
     """)
 
     connection.commit()

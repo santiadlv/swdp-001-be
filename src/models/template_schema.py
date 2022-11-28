@@ -12,6 +12,7 @@ class TemplateModel(BaseModel):
     barcode: int = Field(...)
     client: int = Field(...)
     quantity: int = Field(...)
+    internal_code: int = Field(...)
     t_height: str = Field(...)
     t_width: str = Field(...)
     
@@ -30,6 +31,7 @@ class TemplateModel(BaseModel):
                 "barcode" : 1,
                 "client" : 0,
                 "quantity" : 0,
+                "internal_code" : 1,
                 "t_height" : "5cm",
                 "t_width" : "10cm"
             }
@@ -71,6 +73,7 @@ class TemplateUpdate(BaseModel):
     barcode: Optional[int] = Field(...)
     client: Optional[int] = Field(...)
     quantity: Optional[int] = Field(...)
+    internal_code: Optional[int] = Field(...)
     t_height: Optional[str] = Field(...)
     t_width: Optional[str] = Field(...)
     
@@ -90,6 +93,7 @@ class TemplateUpdate(BaseModel):
                 "barcode" : 1,
                 "client" : 0,
                 "quantity" : 0,
+                "internal_code" : 1,
                 "t_height" : "5cm",
                 "t_width" : "10cm"
             }
