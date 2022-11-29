@@ -46,11 +46,11 @@ def insert_values(cursor: sqlite3.Cursor, connection: sqlite3.Connection):
 
     cursor.execute("""
         INSERT INTO templates (name, description, date, purchase_order, supplier, barcode, client, quantity, internal_code, t_height, t_width) 
-        VALUES ("Completa", TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, "10cm", "15cm")
+        VALUES ("Completa", TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, "4in", "4in")
     """)
     cursor.execute("""
         INSERT INTO templates (name, description, date, purchase_order, supplier, barcode, client, quantity, internal_code, t_height, t_width) 
-        VALUES ("Vacia", FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, "10cm", "15cm")
+        VALUES ("Vacia", FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, "2in", "3in")
     """)
 
     connection.commit()
